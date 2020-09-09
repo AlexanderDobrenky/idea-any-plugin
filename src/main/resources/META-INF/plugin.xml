@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>org.example.test-idea-plugin</id>
+    <name>Any</name>
+    <vendor email="support@any.com" url="http://www.any.com">AnyCompany</vendor>
+
+    <description><![CDATA[
+    Test plugin for Any and class chooser problem in settings.
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.json</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <projectConfigurable parentId="tools" instance="com.any.PluginSettingsConfigurable"/>
+        <applicationService serviceImplementation="com.any.PluginSettingsState" />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
